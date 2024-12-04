@@ -29,11 +29,11 @@ pip install -r requirements.txt
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/yourproject.git
+   git clone [https://github.com/yourusername/yourproject.git](https://github.com/Basseyelliot/DAB111_project_Group_14)
    ```
 2. Navigate to the project directory:
    ```bash
-   cd yourproject
+   cd [Foldername]
    ```
 3. Install the required packages:
    ```bash
@@ -59,7 +59,7 @@ Then, open your web browser and go to `http://127.0.0.1:5000/`.
 
 ## About
 
-This project collects data from [source] and presents it through a web interface using Flask. The data is stored in a SQLite database, and the application provides an About page detailing the source of the data and definitions of each variable.
+This project collects data from [[source](https://www.kaggle.com/datasets/efoceeworld/bikes-orderliness/data)] and presents it through a web interface using Flask. The data is stored in a SQLite database, and the application provides an About page detailing the source of the data and definitions of each variable.
 
 ## License
 
