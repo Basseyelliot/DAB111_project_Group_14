@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Flask App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>About This Application</h1>
+    </header>
+    <main>
+        <section>
+            <ul>
+                <li><a href="{{ url_for('index')}}">The Home Page</a></li>
+            </ul>
+        </section>
+        <!-- Data Source Section -->
+        <section id="data-source">
+            <h2>Data Source</h2>
+            <p>{{ data_source_description }}</p>
+            <ul>
+                {% for source in data_sources %}
+                    <li><strong>{{ source.name }}</strong>: <a href="{{ source.link }}" target="_blank">{{ source.link }}</a></li>
+                {% endfor %}
+            </ul>
+        </section>
+
+        <!-- Data Definitions Section -->
+        <section id="data-definitions">
+            <h2>Data Definitions</h2>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Definition</th>
+                        <th>Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for column in data_definitions %}
+                    <tr>
+                        <td>{{ column.name }}</td>
+                        <td>{{ column.definition }}</td>
+                        <td>{{ column.type }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; {{ year }} My Flask App</p>
+    </footer>
+</body>
+</html>
